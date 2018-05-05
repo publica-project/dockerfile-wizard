@@ -54,7 +54,7 @@ jobs:
 
   test_image:
     docker:
-      - image: $DOCKER_USERNAME/circleci-bazel:0.13.0
+      - image: $DOCKER_USERNAME/circleci-bazel:0.13.0-v1
         environment:
           <<: *image_config
 
