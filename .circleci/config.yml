@@ -53,7 +53,7 @@ jobs:
 
       - run: chmod +x "/tmp/bazel-0.13.0-installer-linux-x86_64.sh"
 
-      - run: /tmp/bazel-0.13.0-installer-linux-x86_64.sh --prefix /usr/local
+      - run: /tmp/bazel-0.13.0-installer-linux-x86_64.sh --prefix=/usr/local
 
       - store_artifacts:
           path: Dockerfile
