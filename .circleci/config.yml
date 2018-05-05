@@ -6,7 +6,7 @@ image_config: &image_config
 
   IMAGE_NAME: circleci-bazel
 
-  IMAGE_TAG: 0.13.0-v1
+  IMAGE_TAG: 0.13.0-v2
 
   # NOTE: if you're modifying this config.yml file manually
   # rather than using the included setup script,
