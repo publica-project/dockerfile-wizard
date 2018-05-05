@@ -49,12 +49,6 @@ jobs:
 
       - run: docker push $DOCKER_USERNAME/$IMAGE_NAME:$IMAGE_TAG && sleep 10
 
-      - run:
-
-      - run:
-
-      - run:
-
       - store_artifacts:
           path: Dockerfile
 
