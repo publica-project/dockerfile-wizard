@@ -49,11 +49,11 @@ jobs:
 
       - run: docker push $DOCKER_USERNAME/$IMAGE_NAME:$IMAGE_TAG && sleep 10
 
-      - run: curl --location --compressed "https://github.com/bazelbuild/bazel/releases/download/0.13.0/bazel-0.13.0-installer-linux-x86_64.sh" > "/tmp/bazel-0.13.0-installer-linux-x86_64.sh"
+      - run:
 
-      - run: chmod +x "/tmp/bazel-0.13.0-installer-linux-x86_64.sh"
+      - run:
 
-      - run: /tmp/bazel-0.13.0-installer-linux-x86_64.sh --prefix=/usr/local
+      - run:
 
       - store_artifacts:
           path: Dockerfile

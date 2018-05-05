@@ -132,3 +132,8 @@ RUN apt-get -y install libgconf-2-4 \
   && mv chromedriver /usr/local/bin/chromedriver \
   && chmod +x /usr/local/bin/chromedriver"
 fi
+
+echo "# install Bazel
+RUN curl --location --compressed https://github.com/bazelbuild/bazel/releases/download/0.13.0/bazel-0.13.0-installer-linux-x86_64.sh > /tmp/bazel-0.13.0-installer-linux-x86_64.sh \
+	&& chmod +x /tmp/bazel-0.13.0-installer-linux-x86_64.sh \
+  && /tmp/bazel-0.13.0-installer-linux-x86_64.sh --prefix=/usr/local"
