@@ -133,6 +133,9 @@ RUN apt-get -y install libgconf-2-4 \
   && chmod +x /usr/local/bin/chromedriver"
 fi
 
+echo "# install Go
+RUN apt-get -y install -t golang-1.10"
+
 echo "# install Bazel
 RUN curl --location --compressed https://github.com/bazelbuild/bazel/releases/download/0.13.0/bazel-0.13.0-installer-linux-x86_64.sh > /tmp/bazel-0.13.0-installer-linux-x86_64.sh \
 	&& chmod +x /tmp/bazel-0.13.0-installer-linux-x86_64.sh \
