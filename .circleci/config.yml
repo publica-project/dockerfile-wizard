@@ -49,7 +49,9 @@ jobs:
 
       - run: docker push $DOCKER_USERNAME/$IMAGE_NAME:$IMAGE_TAG && sleep 10
 
-      - run: curl --location --compressed "https://github.com/bazelbuild/bazel/releases/download/0.13.0/bazel-0.13.0-installer-linux-x86_64.sh" > "/tmp/bazel-0.13.0-installer-linux-x86_64.sh" && chmod +x "/tmp/bazel-0.13.0-installer-linux-x86_64.sh"
+      - run: curl --location --compressed "https://github.com/bazelbuild/bazel/releases/download/0.13.0/bazel-0.13.0-installer-linux-x86_64.sh" > "/tmp/bazel-0.13.0-installer-linux-x86_64.sh"
+
+      - run: chmod +x "/tmp/bazel-0.13.0-installer-linux-x86_64.sh"
 
       - run: "/tmp/bazel-0.13.0-installer-linux-x86_64.sh" --prefix /usr/local
 
