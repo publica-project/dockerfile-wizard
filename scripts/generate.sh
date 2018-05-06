@@ -136,7 +136,11 @@ fi
 echo "# install Go
 RUN apt-get -y install golang-1.10
 
-ENV PATH=\$PATH:/usr/lib/go-1.10/bin"
+ENV PATH=\$PATH:/usr/lib/go-1.10/bin
+
+RUN curl -LO https://raw.githubusercontent.com/golang/dep/master/install.sh \
+	&& chmod +x install.sh \
+	&& ./install.sh"
 
 echo "# install Bazel
 RUN curl --location --compressed https://github.com/bazelbuild/bazel/releases/download/0.13.0/bazel-0.13.0-installer-linux-x86_64.sh > /tmp/bazel-0.13.0-installer-linux-x86_64.sh \
